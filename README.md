@@ -1,4 +1,4 @@
-# robots.txt - a language grammar for highlight.js
+# papyrus - a language grammar for highlight.js
 
 
 ## License
