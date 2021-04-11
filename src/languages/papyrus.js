@@ -6,10 +6,31 @@ Website: https://github.com/Pickysaurus/highlight.js-papyrus
 */
 
 
+const NATIVE_OBJECTS = [
+    "Form", "ActiveMagicEffects", "Alias", "ReferenceAlias", "LocationAlias",
+    "Debug", "Game", "Math", "Utility", "Action", "Activator", "Flora",
+    "Furniture", "TalkingActivator", "ActorBase", "Ammo", "Armor",
+    "AssociationType", "Book", "Cell", "Class", "Container", "Door",
+    "EffectShader", "Enchantment", "EncounterZone", "Explosion", "Faction",
+    "FormList", "GlobalVariable", "Hazard", "Idle", "ImageSpaceModifier",
+    "ImpactDataSet", "Ingredient", "Keyword", "LocationRefType", "LeveledActor",
+    "LeveledItem", "LeveledSpell", "Light", "Location", "MagicEffect",
+    "Message", "MiscObject", "Apparatus", "ConstructableObject", "Key",
+    "SoulGem", "MusicType", "ObjectReference", "Actor", "Outfit",
+    "Package", "Perk", "Potion", "Projectile", "Quest", "Race", "Scene",
+    "Scroll", "Shout", "Sound", "SoundCategory", "Spell", "Static",
+    "TextureSet", "Topic", "TopicInfo", "VisualEffect", "VoiceType",
+    "Weapon", "Weather", "WordOfPower", "WorldSpace"
+];
+
 export default function(hljs) {
     const PROP_COMMENT = hljs.COMMENT(/\{/, /\}/); // Text between {} braces
     const SINGLE_LINE_COMMENT = hljs.COMMENT(/\;/); //Starts with ;
     const MULTI_LINE_COMMENT = hljs.COMMENT(/\\\;/, /\;\\/); // Starts with \; ends with ;\
+    const STRING_OBJ = {
+        clasName: 'string',
+        begin: '"', end: '"'
+    }; // "Text is always in double quotes"
 
     return {
         name: "Papyrus",
@@ -20,6 +41,11 @@ export default function(hljs) {
             PROP_COMMENT,
             SINGLE_LINE_COMMENT,
             MULTI_LINE_COMMENT,
+            {
+                className: 'type',
+                keywords: 'scriptname extends as property'
+
+            },
             {
                 className: 'string',
                 begin:'"', end: '"'
