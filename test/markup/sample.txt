@@ -20,7 +20,6 @@ Event SomeEvent(ObjectReference akActionRef)
   myValue = 5
  else
   myString = "test"
-  this.that()
  endif
 EndEvent
 
@@ -43,6 +42,8 @@ EndState
 
 State "boogie"
  Function Do()
+   {Function comment}
    myString = "Something"
+   Self.GetName()
  EndFunction
 EndState

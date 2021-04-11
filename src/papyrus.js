@@ -21,11 +21,15 @@ const NATIVE_OBJECTS = [
     'Scroll', 'Shout', 'Sound', 'SoundCategory', 'Spell', 'Static',
     'TextureSet', 'Topic', 'TopicInfo', 'VisualEffect', 'VoiceType',
     'Weapon', 'Weather', 'WordOfPower', 'WorldSpace'
-];
+]; //Base types found in the vanilla game(s).
 
-const GLOBAL_KEYWORDS = [
+const SCRIPT_EXT_OBJECTS = [
+    'ColorComponent', 'FormType', 'GameData', 'Input', 'ModEvent', 'NetImmerse', 'SKSE',
+    'SpawnerTask', 'StringUtil', 'UI', 'UICallback', 'WornObject', 'ActorValueInfo',
+    'ArmorAddon', 'Art', 'ColorForm', 'CombatStyle', 'DefaultObjectManager', 'EquipSlot',
+    'HeadPart', 'SoundDescriptor', 'TreeObject'
+]; //Additional types introduced by the Script Extender applications.
 
-];
 
 const OPERATORS = {
     className: 'operator',
@@ -33,15 +37,12 @@ const OPERATORS = {
     begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/
   };
 
-const FUNCTION_KEYWORDS = [
-    'if', 'elseif', 'endif', 'while', 'endwhile','self'
-];
 
 const KEYWORDS = {
     $pattern: /\w+/,
     keyword: ['Event', 'Function', 'EndEvent', 'EndFunction', 'State', 'EndState', 'extends', 'property', 'return'],
     built_in: ['if', 'as', 'elseif', 'endif', 'while', 'endwhile', 'auto', 'self'],
-    type: NATIVE_OBJECTS,
+    type: [ ...NATIVE_OBJECTS, ...SCRIPT_EXT_OBJECTS],
     literal: ['false', 'true', 'NONE', 'string', 'bool', 'int']
 }
 
@@ -81,6 +82,7 @@ export default function(hljs) {
             hljs.NUMBER_MODE,
             FUNCTION_BLOCK,
             STRING_OBJ,
+            // Script Title
             {
                 className: 'title',
                 keywords: 'scriptname extends',
@@ -88,6 +90,7 @@ export default function(hljs) {
                 begin: /scriptname/
 
             },
+            // States
             {
                 className: 'class',
                 begin: /^(?:auto )?state/, end: /endstate/,
