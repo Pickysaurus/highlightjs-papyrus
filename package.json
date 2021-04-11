@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "highlight.js syntax for Papyrus",
   "main": "src/papyrus.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,10 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/Pickysaurus/highlight.js-papyrus.git"
   },
-  "author": "Pickysaurus",
+  "keywords": [
+    "papyrus",
+    "highlight.js",
+    "highlightjs",
+    "syntax"
+  ],
+  "author": "Mike Watling (Pickysaurus)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Pickysaurus/highlight.js-papyrus/issues"
   },
-  "homepage": "https://github.com/Pickysaurus/highlight.js-papyrus#readme"
+  "homepage": "https://github.com/Pickysaurus/highlight.js-papyrus"
 }
