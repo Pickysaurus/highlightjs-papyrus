@@ -52,6 +52,10 @@ export default function(hljs) {
                 keywords: NATIVE_OBJECTS
             },
             {
+                className: 'class',
+                begin: /state/, end: /endstate/
+            },
+            {
                 className: 'function',
                 begin: /(function|event)/, end: /(endfunction|endevent)/,
                 contains: [
