@@ -1,5 +1,7 @@
 # papyrus - a language grammar for highlight.js
 
+![version](https://badgen.net/npm/v/highlightjs-papyrus) ![license](https://badgen.net/badge/license/MIT/blue)
+
 
 ## License
 
