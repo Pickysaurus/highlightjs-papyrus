@@ -1,0 +1,1 @@
+<span class="hljs-title">Scriptname</span> SomeScript <span class="hljs-title">extends</span> <span class="hljs-built_in">ObjectReference</span>

@@ -1,0 +1,48 @@
+Scriptname Test extends ObjectReference
+{Comment}
+
+String Property myString Auto
+{Some kind of string}
+
+Bool Property bTrue = true Auto
+
+ObjectReference Property akObj Auto
+
+;/
+Comment multi
+line
+/;
+
+Event SomeEvent(ObjectReference akActionRef)
+ if (true)
+  ;test
+ elseif
+  myValue = 5
+ else
+  myString = "test"
+  this.that()
+ endif
+EndEvent
+
+Function SomeThing()
+ ;/
+  Interior multiline
+ /;
+ 
+ while (true)
+
+ endwhile
+EndFunction
+
+
+Auto State "blarf"
+Bool Function DoThing (ObjectReference akActionRef)
+ {Comment}
+EndFunction
+EndState
+
+State "boogie"
+ Function Do()
+   myString = "Something"
+ EndFunction
+EndState
