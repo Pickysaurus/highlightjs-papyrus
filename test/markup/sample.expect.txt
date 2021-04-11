@@ -1,1 +1,49 @@
-<span class="hljs-title">Scriptname</span> SomeScript <span class="hljs-title">extends</span> <span class="hljs-built_in">ObjectReference</span>
+<span class="hljs-title"><span class="hljs-keyword">Scriptname</span></span> Test <span class="hljs-keyword">extends</span> <span class="hljs-type">ObjectReference</span>
+<span class="hljs-comment">{Comment}</span>
+
+<span class="hljs-literal">String</span> <span class="hljs-keyword">Property</span> myString <span class="hljs-built_in">Auto</span>
+<span class="hljs-comment">{Some kind of string}</span>
+
+<span class="hljs-literal">Bool</span> <span class="hljs-keyword">Property</span> bTrue = <span class="hljs-literal">true</span> <span class="hljs-built_in">Auto</span>
+
+<span class="hljs-type">ObjectReference</span> <span class="hljs-keyword">Property</span> akObj <span class="hljs-built_in">Auto</span>
+
+<span class="hljs-comment">;/
+Comment multi
+line
+/;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">Event</span> SomeEvent(<span class="hljs-type">ObjectReference</span> akActionRef)
+ <span class="hljs-built_in">if</span> (<span class="hljs-literal">true</span>)
+  <span class="hljs-comment">;test</span>
+ <span class="hljs-built_in">elseif</span>
+  myValue <span class="hljs-operator">=</span> <span class="hljs-number">5</span>
+ else
+  myString <span class="hljs-operator">=</span> <span class="hljs-string">&quot;test&quot;</span>
+ <span class="hljs-built_in">endif</span>
+<span class="hljs-keyword">EndEvent</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">Function</span> SomeThing()
+ <span class="hljs-comment">;/
+  Interior multiline
+ /;</span>
+ 
+ <span class="hljs-built_in">while</span> (<span class="hljs-literal">true</span>)
+
+ <span class="hljs-built_in">endwhile</span>
+<span class="hljs-keyword">EndFunction</span></span>
+
+
+<span class="hljs-class"><span class="hljs-built_in">Auto</span> <span class="hljs-keyword">State</span> &quot;blarf&quot;
+<span class="hljs-literal">Bool</span> <span class="hljs-function"><span class="hljs-keyword">Function</span> DoThing (<span class="hljs-type">ObjectReference</span> akActionRef)
+ <span class="hljs-comment">{Comment}</span>
+<span class="hljs-keyword">EndFunction</span></span>
+<span class="hljs-keyword">EndState</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">State</span> &quot;boogie&quot;
+ <span class="hljs-function"><span class="hljs-keyword">Function</span> Do()
+   <span class="hljs-comment">{Function comment}</span>
+   myString <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Something&quot;</span>
+   <span class="hljs-built_in">Self</span><span class="hljs-operator">.</span>GetName()
+ <span class="hljs-keyword">EndFunction</span></span>
+<span class="hljs-keyword">EndState</span></span>
