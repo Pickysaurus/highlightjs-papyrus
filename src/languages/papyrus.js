@@ -53,7 +53,7 @@ export default function(hljs) {
             },
             {
                 className: 'class',
-                begin: /state/, end: /endstate/
+                begin: /^(?:auto )?state/, end: /endstate/
             },
             {
                 className: 'function',
