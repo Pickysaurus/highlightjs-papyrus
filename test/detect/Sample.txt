@@ -1,0 +1,47 @@
+Scriptname MyScript extends ObjectReference Conditional
+{Script description comment}
+
+ObjectReference Property objProp Auto
+{Property comment}
+
+Form[] Property formArray Auto
+{Property comment}
+
+FormList Property SomeFormList AutoReadOnly Hidden
+
+Bool Property bBoolean Auto Conditional
+
+Int iInteger
+; Single line comment
+
+;/
+Multi line comment 
+With two lines
+/;
+
+State "MyState"
+    Event OnActivate(ObjectReference akActionRef)
+        {Braces inside a function}
+        ; Single Line Comment inside function
+        ;/
+            Mulit Line Comment
+            Inside a function
+        /;
+        Actor someActor = akActionRef as Actor
+        if (someActor == Game.GetPlayer())
+            ;Comment inside in IF check
+        endif
+    EndEvent
+EndState
+
+Function SomeFunction(Int iInt, Form[] Forms) Global
+    {Braces inside a function}
+    ; Single Line Comment inside function
+    ;/
+        Mulit Line Comment
+        Inside a function
+    /;
+
+    Form someForm = Forms[0];
+    
+EndFunction
