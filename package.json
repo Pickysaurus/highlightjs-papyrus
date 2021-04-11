@@ -2,7 +2,7 @@
   "name": "hightlightjs-papyrus",
   "version": "0.0.1",
   "description": "highlight.js syntax for Papyrus",
-  "main": "src/languages/papyrus.js",
+  "main": "src/papyrus.js",
   "directories": {
     "test": "test"
   },

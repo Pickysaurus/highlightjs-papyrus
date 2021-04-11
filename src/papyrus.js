@@ -44,12 +44,14 @@ export default function(hljs) {
             hljs.NUMEBER_MODE,
             {
                 className: 'title',
-                keywords: 'scriptname extends'
+                keywords: 'scriptname extends',
+                relevance: 7
 
             },
             {
                 className: 'built_in',
-                keywords: NATIVE_OBJECTS
+                keywords: NATIVE_OBJECTS,
+                relevance: 8
             },
             {
                 className: 'class',
