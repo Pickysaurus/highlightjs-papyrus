@@ -48,7 +48,7 @@ export default function(hljs) {
 
             },
             {
-                className: 'type',
+                className: 'built_in',
                 keywords: NATIVE_OBJECTS
             },
             {
