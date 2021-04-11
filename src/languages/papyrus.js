@@ -41,14 +41,25 @@ export default function(hljs) {
             PROP_COMMENT,
             SINGLE_LINE_COMMENT,
             MULTI_LINE_COMMENT,
+            hljs.NUMEBER_MODE,
             {
-                className: 'type',
-                keywords: 'scriptname extends as property'
+                className: 'title',
+                keywords: 'scriptname extends'
 
             },
             {
-                className: 'string',
-                begin:'"', end: '"'
+                className: 'type',
+                keywords: NATIVE_OBJECTS
+            },
+            {
+                className: 'function',
+                begin: /(function|event)/, end: /(endfunction|endevent)/,
+                contains: [
+                    STRING_OBJ,
+                    PROP_COMMENT,
+                    SINGLE_LINE_COMMENT,
+                    MULTI_LINE_COMMENT
+                ]
             },
         ]
     }
