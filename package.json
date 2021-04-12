@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pickysaurus/highlight.js-papyrus.git"
+    "url": "git+https://github.com/Pickysaurus/highlightjs-papyrus.git"
   },
   "keywords": [
     "papyrus",
@@ -19,7 +19,7 @@
   "author": "Mike Watling (Pickysaurus)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pickysaurus/highlight.js-papyrus/issues"
+    "url": "https://github.com/Pickysaurus/highlightjs-papyrus/issues"
   },
-  "homepage": "https://github.com/Pickysaurus/highlight.js-papyrus"
+  "homepage": "https://github.com/Pickysaurus/highlightjs-papyrus"
 }
