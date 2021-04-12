@@ -34,9 +34,9 @@ If you're using Node / Webpack / Rollup / Browserify, etc, simply require the la
 
 ```javascript
 var hljs = require('highlight.js');
-var hljsRobotsTxt = require('highlightjs-papyrus');
+var hljsPapyrus = require('highlightjs-papyrus');
 
-hljs.registerLanguage("papyrus", hljsRobotsTxt);
+hljs.registerLanguage("papyrus", hljsPapyrus);
 hljs.initHighlightingOnLoad();
 ```
 
