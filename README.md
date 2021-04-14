@@ -37,7 +37,7 @@ var hljs = require('highlight.js');
 var hljsPapyrus = require('highlightjs-papyrus');
 
 hljs.registerLanguage("papyrus", hljsPapyrus);
-hljs.initHighlightingOnLoad();
+hljs.highlightAll();
 ```
 
 
